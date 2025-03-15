@@ -7514,7 +7514,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -7615,11 +7615,6 @@ a.anchor-link {
             <span class="n">reward</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="n">Q_target</span> <span class="o">=</span> <span class="n">reward</span> <span class="o">+</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="n">W_next_idx</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Include discounted future reward</span>
         
-        <span class="c1"># if t == T - 1:</span>
-        <span class="c1">#     Q_target = reward  # No future reward at final time step</span>
-        <span class="c1"># else:</span>
-        <span class="c1">#     Q_target = reward + gamma * np.max(Q[W_next_idx, t + 1])  # Include discounted future reward</span>
-        
         <span class="c1"># Update Q-value using TD learning rule</span>
         <span class="n">Q</span><span class="p">[</span><span class="n">W_idx</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">theta_idx</span><span class="p">]</span> <span class="o">+=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q_target</span> <span class="o">-</span> <span class="n">Q</span><span class="p">[</span><span class="n">W_idx</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">theta_idx</span><span class="p">])</span>
         
@@ -7697,7 +7692,7 @@ Number of wealth bins: 102
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -7775,11 +7770,6 @@ Number of wealth bins: 102
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">reward</span> <span class="o">=</span> <span class="mi">0</span>
                 <span class="n">Q_target</span> <span class="o">=</span> <span class="n">reward</span> <span class="o">+</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="n">W_next_idx</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Include discounted future reward</span>
-                
-            <span class="c1"># if t == T - 1:</span>
-            <span class="c1">#     Q_target = reward</span>
-            <span class="c1"># else:</span>
-            <span class="c1">#     Q_target = reward + gamma * np.max(Q[W_next_idx, t + 1])</span>
             
             <span class="n">Q</span><span class="p">[</span><span class="n">W_idx</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">theta_idx</span><span class="p">]</span> <span class="o">+=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q_target</span> <span class="o">-</span> <span class="n">Q</span><span class="p">[</span><span class="n">W_idx</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">theta_idx</span><span class="p">])</span>
             <span class="n">W</span> <span class="o">=</span> <span class="n">W_next</span>
@@ -8091,7 +8081,7 @@ Running with Low Alpha, Low Episodes: alpha=0.05, num_episodes=50000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Define epsilon combinations</span>
@@ -8153,11 +8143,6 @@ Running with Low Alpha, Low Episodes: alpha=0.05, num_episodes=50000
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">reward</span> <span class="o">=</span> <span class="mi">0</span>
                 <span class="n">Q_target</span> <span class="o">=</span> <span class="n">reward</span> <span class="o">+</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">Q</span><span class="p">[</span><span class="n">W_next_idx</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Include discounted future reward</span>
-            
-            <span class="c1"># if t == T - 1:</span>
-            <span class="c1">#     Q_target = reward</span>
-            <span class="c1"># else:</span>
-            <span class="c1">#     Q_target = reward + gamma * np.max(Q[W_next_idx, t + 1])</span>
             
             <span class="n">Q</span><span class="p">[</span><span class="n">W_idx</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">theta_idx</span><span class="p">]</span> <span class="o">+=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q_target</span> <span class="o">-</span> <span class="n">Q</span><span class="p">[</span><span class="n">W_idx</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">theta_idx</span><span class="p">])</span>
             <span class="n">W</span> <span class="o">=</span> <span class="n">W_next</span>
